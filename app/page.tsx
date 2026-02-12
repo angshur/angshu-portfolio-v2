@@ -1,65 +1,69 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main
+      style={{
+        maxWidth: 920,
+        margin: "0 auto",
+        padding: "88px 20px",
+        fontFamily:
+          'ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"',
+      }}
+    >
+      <p style={{ color: "#64748b", fontSize: 14, margin: 0 }}>
+        AI Product Leadership • Data Platforms • Agent Systems
+      </p>
+
+      <h1
+        style={{
+          marginTop: 18,
+          fontSize: 52,
+          lineHeight: 1.05,
+          letterSpacing: "-0.03em",
+          marginBottom: 0,
+        }}
+      >
+        AI-Native Product Leader building data platforms, agent systems, and durable product infrastructure
+      </h1>
+
+      <p style={{ marginTop: 18, fontSize: 18, color: "#334155", lineHeight: 1.7, maxWidth: 780 }}>
+        I design and ship AI-powered systems that improve adoption, increase retention, and unlock expansion in complex
+        marketing environments.
+      </p>
+
+      <div style={{ marginTop: 26, display: "flex", gap: 14, flexWrap: "wrap" }}>
+        <Link href="/products">View Product Portfolio →</Link>
+        <Link href="/innovation">Explore Innovation Lab →</Link>
+        <Link href="/writing">Read Writing →</Link>
+        <Link href="/about">About →</Link>
+      </div>
+
+      <hr style={{ margin: "44px 0", border: 0, borderTop: "1px solid #e2e8f0" }} />
+
+      <section style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
+        <div style={{ border: "1px solid #e2e8f0", borderRadius: 16, padding: 18 }}>
+          <p style={{ margin: 0, fontWeight: 650 }}>Platform Systems</p>
+          <p style={{ marginTop: 8, marginBottom: 0, color: "#475569", lineHeight: 1.6, fontSize: 14 }}>
+            Composable data pipelines, transformation logic, and governed analytics layers used by marketing orgs at scale.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div style={{ border: "1px solid #e2e8f0", borderRadius: 16, padding: 18 }}>
+          <p style={{ margin: 0, fontWeight: 650 }}>AI Systems</p>
+          <p style={{ marginTop: 8, marginBottom: 0, color: "#475569", lineHeight: 1.6, fontSize: 14 }}>
+            Agent systems built for safe execution and measurable reliability — from insight to deterministic action.
+          </p>
         </div>
-      </main>
-    </div>
+
+        <div style={{ border: "1px solid #e2e8f0", borderRadius: 16, padding: 18 }}>
+          <p style={{ margin: 0, fontWeight: 650 }}>Product Operating Models</p>
+          <p style={{ marginTop: 8, marginBottom: 0, color: "#475569", lineHeight: 1.6, fontSize: 14 }}>
+            Frameworks that increase clarity, alignment, and decision quality in complex platform + AI work.
+          </p>
+        </div>
+      </section>
+    </main>
   );
 }
+
